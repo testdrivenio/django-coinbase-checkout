@@ -28,11 +28,12 @@ Check out the [post](#).
     (venv)$ python manage.py migrate
     ```
 
-1. Add your Stripe test secret and test publishable keys to the *settings.py* file:
+1. Add your Coinbase Commerce API key, webhook secret and checkout ID to *settings.py* file:
 
     ```python
     COINBASE_COMMERCE_API_KEY = '<your coinbase api key here>'
     COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET = '<your coinbase webhook secret here>'
+    COINBASE_CHECKOUT_ID = '<your checkout id>'
     ```
 
 1. Run the server:
