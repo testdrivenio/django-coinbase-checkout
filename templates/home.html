@@ -19,12 +19,18 @@
           </p>
           <div>
             <!-- Coinbase hosted approach (script not required) -->
-            <a class="btn btn-primary w-100" href="{{ checkout_link }}">Purchase (hosted)</a>
+            <a
+              class="btn btn-primary w-100"
+              {% if user.is_authenticated %}data-custom="{{ user.pk }}"{% endif %}
+              href="{{ checkout_link }}"
+            >Purchase (hosted)</a>
             <!-- Coinbase embedded approach (script required) -->
             <div class="mt-2">
-              <a class="btn btn-primary buy-with-crypto w-100" href="{{ checkout_link }}" {% if user.is_authenticated %}data-custom="{{ user.pk }}"{% endif %}>
-                Purchase (embedded)
-              </a>
+              <a
+                class="btn btn-primary buy-with-crypto w-100"
+                {% if user.is_authenticated %}data-custom="{{ user.pk }}"{% endif %}
+                href="{{ checkout_link }}"
+              >Purchase (embedded)</a>
               <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
             </div>
           </div>
