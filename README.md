@@ -4,7 +4,7 @@ Accept payments using the [Coinbase Checkout API](https://commerce.coinbase.com/
 
 ## Want to learn how to build this?
 
-Check out the [post](#).
+Check out the [tutorial](https://testdriven.io/blog/django-coinbase/).
 
 ## Want to use this project?
 
